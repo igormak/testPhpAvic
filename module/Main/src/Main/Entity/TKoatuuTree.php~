@@ -1,0 +1,74 @@
+<?php
+
+namespace Main\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * TKoatuuTree
+ *
+ * @ORM\Table(name="t_koatuu_tree")
+ * @ORM\Entity
+ */
+class TKoatuuTree
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ter_id", type="string", length=10, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $terId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ter_pid", type="string", length=10, nullable=true)
+     */
+    private $terPid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ter_name", type="string", length=96, nullable=false)
+     */
+    private $terName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ter_address", type="string", length=128, nullable=false)
+     */
+    private $terAddress;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ter_type_id", type="integer", nullable=false)
+     */
+    private $terTypeId;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="ter_level", type="boolean", nullable=false)
+     */
+    private $terLevel;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="ter_mask", type="boolean", nullable=false)
+     */
+    private $terMask;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="reg_id", type="string", length=2, nullable=false)
+     */
+    private $regId;
+
+
+}
